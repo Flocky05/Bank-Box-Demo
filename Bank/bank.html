@@ -12,37 +12,49 @@
     <main class="w-9/12 mx-auto mt-16">
        <section class="grid grid-cols-3 gap-8 text-white ">
             <div class="bg-red-400 mx-auto p-16 rounded-xl w-full">
-                <h3 class="text-3xl">Diposit</h3>
-                <h2 class="text-4xl font-semibold">$$00</h2>
+                <h3 class="text-3xl">Deposit</h3>
+                <h2  class="text-4xl font-semibold">$<span id="deposit">00</span></h2>
             </div>
             <div class="bg-green-400  mx-auto p-16 rounded-xl w-full">
                 <h3 class="text-3xl">Credit</h3>
-                <h2 class="text-4xl font-semibold">$$00</h2>
+                <h2 class="text-4xl font-semibold">$ <span  id="credit" >00</span></h2>
             </div>
             <div class="bg-purple-600  mx-auto p-16 rounded-xl w-full ">
                 <h3 class="text-3xl">Balance</h3>
-                <h2 class="text-4xl font-semibold">$$1200</h2>
+                <h2  class="text-4xl font-semibold">$ <span id="total-balance">1200</span></h2>
             </div>
        </section>
        <section class="grid grid-cols-2 gap-8 text-white mt-8 ">
             <div class="bg-yellow-300 mx-auto p-16 rounded-xl w-full">
                 <h2 class="text-3xl font-semibold mb-4" >Please Diposit</h2>
-            <div>
-                <input class="w-3/4 block mb-4 h-7" type="email" placeholder="Enter Email" name="" id="deposit">
-            </div>
-            <button id="btn-sumbit" class="bg-orange-700 hover:bg-blue-950 text-white px-4 py-1 round rounded-lg text-xl">Submit</button>
+            
+                 <input class="w-3/4 block mb-4 h-7 text-black" type="email" placeholder="Enter Amount" name="" id="input-deposit">
+          
+                <button id="btn-deposit" class="bg-orange-700 hover:bg-blue-950 text-white px-4 py-1 round rounded-lg text-xl">Deposit</button>
 
             </div>
             <div class="bg-red-300  mx-auto p-16 rounded-xl w-full">
                 <h2 class="text-3xl font-semibold mb-4" >Please Credit</h2>
-            <div>
-                <input class="w-3/4 block mb-4 h-7" type="email" placeholder="Enter Email" name="" id="credit">
-            </div>
-            <button id="btn-sumbit" class="bg-orange-700 hover:bg-blue-950 text-white px-4 py-1 round rounded-lg text-xl">Submit</button>
+            
+                <input class="w-3/4 block mb-4 h-7 text-black" type="email" placeholder="Enter Amount" name="" id="input-credit">
+            
+                <button id="btn-withdraw" class="bg-orange-700 hover:bg-blue-950 text-white px-4 py-1 round rounded-lg text-xl">Withdraw</button>
 
             </div>
        </section>
-
     </main>
+    <script>
+        document.getElementById('btn-deposit').addEventListener('click',function(){
+            const Deposit =document.getElementById('input-deposit').value;
+            const depositMoney= document.getElementById('deposit');
+            const depositMoneyTotal=depositMoney.innerText;
+            depositMoney.innerText=parseInt(depositMoneyTotal) + parseInt(Deposit);
+            
+            const balance = document.getElementById('total-balance');
+            const TotalBalance =balance.innerText;
+            balance.innerText= parseInt(TotalBalance) + parseInt(Deposit);
+        })
+    </script>
+    <script src="../js/interaction.js"></script>
 </body>
 </html>
