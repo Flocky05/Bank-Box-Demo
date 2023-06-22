@@ -63,11 +63,18 @@
                 // console.log("my name is rakibul");
                 const withdrawMoney =document.getElementById('credit');
                 const withdrawMoneytotal= withdrawMoney.innerText;
-                withdrawMoney.innerText= parseInt(withdrawMoneytotal)+ parseInt(Withdraw)
+                
 
                 const balance = document.getElementById('total-balance');
                 const TotalBalance =balance.innerText;
-                balance.innerText= parseInt(TotalBalance) - parseInt(Withdraw);
+                const x = parseInt(TotalBalance) - parseInt(Withdraw);
+                if(x>=0){
+                    balance.innerText=x;
+                    withdrawMoney.innerText= parseInt(withdrawMoneytotal)+ parseInt(Withdraw)
+                } else{
+                    alert("Is not possible to transection couse of you don't have enough money in your account");
+                }
+
             })
 
     </script>
