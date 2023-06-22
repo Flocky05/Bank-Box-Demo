@@ -9,8 +9,40 @@
 </head>
 <body  class="bg-cyan-300">
     <h2 class="font-bold center text-center text-4xl mt-8">Welcome to Bank Box</h2>
-    <main>
-        <h2 class="font-bolt text-8xl">Hi Mama whats up bro</h2>
+    <main class="w-9/12 mx-auto mt-16">
+       <section class="grid grid-cols-3 gap-8 text-white ">
+            <div class="bg-red-400 mx-auto p-16 rounded-xl w-full">
+                <h3 class="text-3xl">Diposit</h3>
+                <h2 class="text-4xl font-semibold">$$00</h2>
+            </div>
+            <div class="bg-green-400  mx-auto p-16 rounded-xl w-full">
+                <h3 class="text-3xl">Credit</h3>
+                <h2 class="text-4xl font-semibold">$$00</h2>
+            </div>
+            <div class="bg-purple-600  mx-auto p-16 rounded-xl w-full ">
+                <h3 class="text-3xl">Balance</h3>
+                <h2 class="text-4xl font-semibold">$$1200</h2>
+            </div>
+       </section>
+       <section class="grid grid-cols-2 gap-8 text-white mt-8 ">
+            <div class="bg-yellow-300 mx-auto p-16 rounded-xl w-full">
+                <h2 class="text-3xl font-semibold mb-4" >Please Diposit</h2>
+            <div>
+                <input class="w-3/4 block mb-4 h-7" type="email" placeholder="Enter Email" name="" id="deposit">
+            </div>
+            <button id="btn-sumbit" class="bg-orange-700 hover:bg-blue-950 text-white px-4 py-1 round rounded-lg text-xl">Submit</button>
+
+            </div>
+            <div class="bg-red-300  mx-auto p-16 rounded-xl w-full">
+                <h2 class="text-3xl font-semibold mb-4" >Please Credit</h2>
+            <div>
+                <input class="w-3/4 block mb-4 h-7" type="email" placeholder="Enter Email" name="" id="credit">
+            </div>
+            <button id="btn-sumbit" class="bg-orange-700 hover:bg-blue-950 text-white px-4 py-1 round rounded-lg text-xl">Submit</button>
+
+            </div>
+       </section>
+
     </main>
 </body>
 </html>
