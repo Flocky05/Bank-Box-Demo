@@ -7,8 +7,10 @@ document.getElementById("btn-sumbit").addEventListener("click", function () {
     emailFiled === "md.rakibul@gmail.com" &&
     passwordFiled === "mehedi123@"
   ) {
-    console.log("valid user");
+    window.location.href = "http://127.0.0.1:5500/Bank/bank.html";
   } else {
-    console.log("Invalid user");
+    alert(
+      "Please provide correct information, We are getting some problem with your information"
+    );
   }
 });
